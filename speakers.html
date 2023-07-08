@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Data_Science_School/Assets/Images/circle-3041437.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Speakers</title>
+    <style>
+*{
+    font-family: 'Kumbh Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.Speakers{
+    /* background-image: url("/Data_Science_School/Assets/Images/3853138.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background: hsl(220, 16%, 96%);
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 12em;
+    padding-right: 11em;
+}
+.top{
+    margin-bottom: 5rem;
+}
+.top h1{
+    width: 25%;
+    color: black;
+    font-size: 60px;
+}
+.top h3{
+    color: rgb(135,206,250);
+    font-size: 24px;
+    margin-bottom: 1.4rem;
+}
+.top h2{
+    font-size: 65px;
+    color: black;
+    margin-right: 4rem;
+}
+.top div{
+    display: flex;
+    justify-content: space-between;
+}
+#arrow{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    top: 67em;
+    left: 144em;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background: rgb(135,206,250);
+    display: none;
+}
+#arrow img{
+    width: 60%;
+}
+.others{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+}
+.top-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 3rem;
+}
+.top-2 h2{
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 2rem;
+}
+.bottom-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.bottom-2 div{
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 85%;
+    padding: 1rem;
+}
+.bottom-2 div img{
+    width: 20%;
+}
+.bottom-2 div h3{
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+.bottom-2 div p{
+    color: hsl(233, 8%, 62%);
+    font-size: 16px;
+    width: 78%;
+}
+.online{
+    background: white;
+    border-radius: 4px;
+}
+.bottom-3{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: -30rem;
+}
+.bottom-3 img{
+    width: 100%;
+    height: 30vh;
+    filter: opacity(70%);
+    filter: brightness(70%);
+}
+.bottom-3 div{
+    background: white;
+    width: 85%;
+    border-radius: 4px;
+    margin-bottom: 4rem
+}
+.bottom-3 div div{
+    padding: 2rem;
+    margin-top: -.3rem;
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.bottom-3 h6{
+    font-size: 24px;
+    padding-bottom: 1rem;
+    font-weight: 500;
+}
+.bottom-3 h4{
+    width: 100%;
+    font-size: 22px;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+.bottom-3 p{
+    font-size: 20px;
+    width: 120%;
+    padding-bottom: 1rem;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#button{
+    background: transparent;
+    color: rgb(135,206,250);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+.row-2{
+    display: none;
+}
+@media (min-width: 360px){
+    .Speakers{
+        padding: 2rem;
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top h3{
+        font-size: 20px;
+    }
+    .top div{
+        flex-direction: column;
+        align-items: center;
+    }
+    .top div h1{
+        font-size: 50px;
+        width: 100%;
+    }
+    .top div h2{
+        display: none;
+    }
+    .bottom-3{
+        grid-template-columns: 1fr;
+    }
+    .bottom-3 div{
+        width: 100%;
+    }
+    .bottom-3 h6{
+        font-size: 20px;
+    }
+    .bottom-3 h4{
+        font-size: 18px;
+    }
+    .bottom-3 p{
+        font-size: 16px;
+    }
+    #arrow{
+        position: unset;
+        display: none;
+        border-radius: 1rem;
+        margin-top: 2rem;
+    }
+    .top-2{
+        padding: 0;
+    }
+    .top-2 h2{
+        font-size: 22px;
+        margin-bottom: 1rem;
+    }
+    .bottom-2{
+        grid-template-columns: 1fr;
+    }
+    .bottom-2 div{
+        width: 100%;
+        height: 15vh;
+    }
+}
+@media (min-width: 701px){
+    .bottom-3 img{
+        height: 50vh;
+    }
+    .bottom-3 h6{
+        font-size: 28px;
+    }
+    .bottom-3 h4{
+        font-size: 26px;
+    }
+    .bottom-3 p{
+        font-size: 24px;
+    }
+    .bottom-2{
+        grid-template-columns: 1fr 1fr;
+    }
+    .top-2 h2{
+        font-size: 30px;
+        margin-bottom: 1rem;
+    }
+    .bottom-2 div{
+        width: 100%;
+    }
+    .bottom-2 div h3{
+        font-size: 22px;
+    }
+    .bottom-2 div p{
+        font-size: 18px;
+    }
+    #arrow{
+        width: 150px;
+        height: 75px;
+    }
+    #arrow img{
+        width: 40%;
+    }
+}
+@media (min-width: 1000px){
+    .top h3{
+        font-size: 28px;
+    }
+    .top div h1{
+        font-size: 65px;
+        width: 100%;
+    }
+    .bottom-3{
+        grid-template-columns: 1fr 1fr;
+    }
+    .bottom-3 div{
+        width: 90%;
+    }
+    .bottom-3 div div{
+        height: 24vh;
+    }
+    .bottom-3 img{
+        height: 40vh;
+    }
+    .bottom-3 h6{
+        font-size: 26px;
+    }
+    .bottom-3 h4{
+        font-size: 24px;
+    }
+    .bottom-3 p{
+        font-size: 22px;
+    }
+    .bottom-2 div{
+        width: 90%;
+    }
+    .top-2 h2{
+        font-size: 30px;
+        margin-bottom: 1rem;
+    }
+    .bottom-2 div h3{
+        font-size: 22px;
+    }
+    .bottom-2 div p{
+        font-size: 18px;
+    }
+    #arrow{
+        width: 150px;
+        height: 75px;
+    }
+    #arrow img{
+        width: 40%;
+    }
+}
+@media (min-width: 1200px){
+    .top h3{
+        font-size: 32px;
+    }
+    .top div h1{
+        font-size: 75px;
+        width: 100%;
+    }
+    .bottom-3 div{
+        width: 90%;
+    }
+    .top-2 h2{
+        font-size: 35px;
+        margin-bottom: 2rem;
+    }
+    .bottom-2 div h3{
+        font-size: 26px;
+    }
+    .bottom-2 div p{
+        font-size: 22px;
+    }
+    #arrow{
+        width: 200px;
+        height: 100px;
+    }
+    #arrow img{
+        width: 50%;
+    }
+}
+@media (min-width: 1400px){
+    .Speakers{
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        padding-left: 12em;
+        padding-right: 11em;
+    }
+    .top{
+        width: 100%;
+    }
+    .top h3{
+        font-size: 24px;
+    }
+    .top div{
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+    }
+    .top div h1{
+        width: 50%;
+        font-size: 60px;
+    }
+    .top div h2{
+        display: block;
+        font-size: 65px;
+        color: black;
+        margin-right: 4rem;
+    }
+    .bottom-3{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .bottom-3 div{
+        width: 85%;
+    }
+    .bottom-3 h6{
+        font-size: 16px;
+        width: 100%;
+    }
+    .bottom-3 h4{
+        font-size: 14px;
+    }
+    .bottom-3 p{
+        font-size: 12px;
+    }
+    #arrow{
+        width: 100px;
+        height: 50px;
+    }
+    #arrow img{
+        width: 50%;
+    }
+    .top-2{
+        padding-top: 3rem;
+    }
+    .top-2 h2{
+        font-size: 30px;
+        margin-bottom: 2rem;
+    }
+    .bottom-2{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .bottom-2 div{
+        height: 15vh;
+        width: 85%;
+    }
+    .bottom-3 img{
+        height: 28vh;
+    }
+    .bottom-3 div div{
+        padding: 1rem;
+        height: 16vh;
+    }
+    .bottom-2 div h3{
+        font-size: 16px;
+    }
+    .bottom-2 div p{
+        font-size: 12px;
+    }
+    #button::after{
+        display: none;
+        content: "";
+        width: 280px;
+        border-radius: 100px;
+        height: 3px;
+        margin-top: 2rem;
+        background: rgb(135,206,250);
+        margin-bottom: 1rem;
+        position: absolute;
+        top: 58rem;
+    }
+    #button:hover::after{
+        display: flex;
+    }
+}
+    </style>
+</head>
+<body>
+    <section class="Speakers" id="Speakers">
+        <div class="top">
+            <h3>SPEAKERS</h3>
+            <div>
+                <h1>MEET THE INCREDIBLE SPEAKERS</h1>
+                <h2>7-18 <br>AUG</h2>
+            </div>
+        </div>
+        <div class="bottom-3">
+            <div>
+                <img src="\Data_Science_School\Assets\Images\Chief-Host-Picture.png">
+                <div>
+                    <h6>Professor Folashade Ogunshola</h6>
+                    <h4>Chief Host</h4>
+                    <p>Vice Chancellor</p>
+                </div>
+            </div>
+            <div>
+                <img src="\Data_Science_School\Assets\Images\Host-Picture.png">
+                <div>
+                    <h6>Professor Elijah Oyeyemi</h6>
+                    <h4>Host</h4>
+                    <p>Dean, Faculty of Science</p>
+                </div>
+            </div>
+            <div>
+                <img src="\Data_Science_School\Assets\Images\Co-Host-Picture.png">
+                <div>
+                    <h6>Professor Muminu Adamu</h6>
+                    <h4>Co-Host</h4>
+                    <p>HOD, Department of Statistics</p>
+                </div>
+            </div>
+            <div>
+                <img src="/Data_Science_School\Assets\Images\Speaker-Picture-1.png">
+                <div>
+                    <h6>Associate Professor Tapasi Ghosh</h6>
+                    <h4>Data Sciences and Analytics</h4>
+                    <p>M.S.Ramaiah University of Applied Sciences, India</p>
+                </div>
+            </div>
+            <div class="row-2" id="col-1">
+                <img src="/Data_Science_School\Assets\Images\Speaker-Picture-2.png">
+                <div>
+                    <h6>Rose M. Ray, Ph.D.</h6>
+                    <h4>Principal Scientist</h4>
+                    <p>Data Sciences (Exponent)</p>
+                </div>
+            </div>
+            <div class="row-2" id="col-2">
+                <img src="/Data_Science_School\Assets\Images\Speaker-Picture-3.png">
+                <div>
+                    <h6>Luca Alberto Rizo</h6>
+                    <h4>Senior Research Data Scientist</h4>
+                    <p>Huewei Ireland Research Center</p>
+                </div>
+            </div>
+            <div class="row-2" id="col-3">
+                <img src="/Data_Science_School\Assets\Images\Speaker-Picture-4.png">
+                <div>
+                    <h6>Aleksander Da Silva Boski</h6>
+                    <h4>Data Analytics Teacher</h4>
+                    <p>IronHack</p>
+                </div>
+            </div>
+            <div class="row-2" id="col-4">
+                <img src="/Data_Science_School\Assets\Images\Speaker-Picture-5.png">
+                <div>
+                    <h6>Professor E. Olubusoye</h6>
+                    <p>University of Ibadan</p>
+                </div>
+            </div>
+            <div class="row-2" id="col-5">
+                <img src="/Data_Science_School\Assets\Images\Speaker-Picture-6.png">
+                <div>
+                    <h6>Dr. Ayodeji Akiwowo</h6>
+                    <h4>Senior Data Scientist</h4>
+                    <p>FUJITSU, UK</p>
+                </div>
+            </div>
+            <div class="row-2" id="col-6">
+                <img src="/Data_Science_School\Assets\Images\Speaker-Picture-7.png">
+                <div>
+                    <h6>Associate Professor Sahana Prasad</h6>
+                    <h4>Applied Statistician & Operations Research</h4>
+                </div>
+            </div>
+            <div class="row-2" id="col-7">
+                <img src="/Data_Science_School\Assets\Images\Speaker-Picture-8.png">
+                <div>
+                    <h6>Associate Professor Wijayatunga Priyantha</h6>
+                    <p>Umea University, Sweden</p>
+                </div>
+            </div>
+            <div class="row-2" id="col-8">
+                <img src="/Data_Science_School\Assets\Images\Speaker-Picture-9.png">
+                <div>
+                    <h6>Professor Christopher Thron</h6>
+                    <p>Texas A & M University, USA</p>
+                </div>
+            </div>
+        </div>
+        <div class="button"><button id="button">SEE ALL SPEAKERS</button></div>
+        <div id="others" class="others">
+            <div class="top-2">
+                <h2>Some Other Speakers:</h2>
+            </div>
+            <div class="bottom-2">
+                <div class="online">
+                    <h3>Prof. Shalini S. Gopalkrishnan</h3>
+                    <p>Valencia College</p>
+                </div>
+                <div class="online">
+                    <h3>Junjun Huo</h3>
+                    <p>Senior Data Scientist, Shopify</p>
+                </div>
+                <div class="online">
+                    <h3>Nwachukwu Chibuzor Joshua</h3>
+                    <p>Data Scientist, Metis Analytics</p>
+                </div>
+                <div class="online">
+                    <h3>Oliver Hugh</h3>
+                    <p>Medical Statistician, Perinatal Institute, UK</p>
+                </div>
+                <div class="online">
+                    <h3>Janine Wicke</h3>
+                    <p>Data Scientist</p>
+                </div>
+                <div class="online">
+                    <h3>Parul Sehrawat</h3>
+                    <p>Data Scientist, UK</p>
+                </div>
+                <div class="online">
+                    <h3>Ernesto L. Garcia (PhD)</h3>
+                    <p>University of Missouri, Columbia</p>
+                </div>
+                <div class="online">
+                    <h3>Aiwin Aind</h3>
+                    <p>Data Scientist, Delhi Tech. University</p>
+                </div>
+            </div>
+        </div>
+        <button id="arrow"><img src="Assets/images/arrow-5.png"></button>
+    </section>
+</body>
+
+<script src="/Data_Science_School/home.js"></script>
+</html>
